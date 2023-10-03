@@ -333,6 +333,20 @@ describe("response headers", () => {
 			.handle(new Request("https://dummy.com/"));
 		expect(response.headers.get("HX-Trigger-After-Swap")).toBe("true");
 	});
+
+	it("allows disabling response cache when HX-Request is true", async () => {
+		const response = await new Elysia()
+			.use(htmx({ disableCache: true }))
+			.get("/", () => "ok")
+			.handle(
+				new Request("https://dummy.com/", {
+					headers: { "HX-Request": "true" },
+				}),
+			);
+		expect(response.headers.get("Cache-Control")).toBe(
+			"no-cache, no-store, must-revalidate",
+		);
+	});
 });
 
 describe("hx.isHTMX", () => {

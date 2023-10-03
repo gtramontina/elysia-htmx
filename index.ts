@@ -1,7 +1,11 @@
 import Elysia from "elysia";
 
-export const htmx = () => {
-	return new Elysia({ name: "htmx" }).derive(
+type Options = {
+	disableCache?: boolean;
+};
+
+export const htmx = ({ disableCache }: Options = {}) => {
+	const app = new Elysia({ name: "htmx" }).derive(
 		({ request: { headers }, set }): HtmxContext => {
 			return {
 				hx: {
@@ -61,6 +65,16 @@ export const htmx = () => {
 			};
 		},
 	);
+
+	if (disableCache) {
+		app.on("request", ({ set, request: { headers } }) => {
+			if (headers.get("HX-Request") === "true") {
+				set.headers["Cache-Control"] = "no-cache, no-store, must-revalidate";
+			}
+		});
+	}
+
+	return app;
 };
 
 export type HxSwap =
