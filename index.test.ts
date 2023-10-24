@@ -1,6 +1,6 @@
+import { describe, expect, it } from "bun:test";
 import Elysia from "elysia";
 import { HxSwap, htmx } from "./index.ts";
-import { describe, expect, it } from "bun:test";
 
 describe("request headers", () => {
 	describe("HX-Request", () => {
