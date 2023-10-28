@@ -1,7 +1,7 @@
 {
 	"name": "elysia-htmx",
 	"description": "Elysia HTMX Context",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"homepage": "https://github.com/gtramontina/elysia-htmx.git",
 	"license": "MIT",
 	"module": "index.ts",
@@ -13,10 +13,10 @@
 	},
 	"devDependencies": {
 		"bun-types": "1.0.7",
-		"elysia": "0.7.18"
+		"elysia": "0.7.21"
 	},
 	"peerDependencies": {
 		"typescript": "5.2.2",
-		"elysia": "0.7.18"
+		"elysia": "0.7.21"
 	}
 }
