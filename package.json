@@ -12,7 +12,7 @@
 		"lint:fix": "bun x @biomejs/biome check --apply-unsafe --vcs-client-kind=git --vcs-enabled=true --vcs-use-ignore-file=true . *.json"
 	},
 	"devDependencies": {
-		"bun-types": "1.0.7",
+		"bun-types": "1.0.8",
 		"elysia": "0.7.21"
 	},
 	"peerDependencies": {
