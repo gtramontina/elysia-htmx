@@ -1,7 +1,7 @@
 {
 	"name": "elysia-htmx",
 	"description": "Elysia HTMX Context",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"homepage": "https://github.com/gtramontina/elysia-htmx.git",
 	"license": "MIT",
 	"module": "index.ts",
@@ -12,7 +12,7 @@
 		"lint:fix": "bun x @biomejs/biome check --apply-unsafe --vcs-client-kind=git --vcs-enabled=true --vcs-use-ignore-file=true . *.json"
 	},
 	"devDependencies": {
-		"bun-types": "1.0.7",
+		"bun-types": "1.0.10",
 		"elysia": "0.7.21"
 	},
 	"peerDependencies": {
