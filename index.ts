@@ -5,7 +5,7 @@ type Options = {
 };
 
 export const htmx = ({ disableCache }: Options = {}) => {
-	const app = new Elysia({ name: "htmx" }).derive(
+	const app = new Elysia({ name: "htmx", seed: { disableCache } }).derive(
 		({ request: { headers }, set }): HtmxContext => {
 			return {
 				hx: {
