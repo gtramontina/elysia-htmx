@@ -1,6 +1,6 @@
 # Elysia HTMX
 
-Elysia plugin to create or forward Request IDs.
+Elysia plugin to support integration with [HTMX](https://htmx.org/).
 
 ## Installation
 
