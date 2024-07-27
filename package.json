@@ -9,11 +9,13 @@
 	"type": "module",
 	"scripts": {
 		"lint": "bun x @biomejs/biome check --vcs-client-kind=git --vcs-enabled=true --vcs-use-ignore-file=true . *.json",
-		"lint:fix": "bun x @biomejs/biome check --write --unsafe --vcs-client-kind=git --vcs-enabled=true --vcs-use-ignore-file=true . *.json"
+		"lint:fix": "bun x @biomejs/biome check --write --unsafe --vcs-client-kind=git --vcs-enabled=true --vcs-use-ignore-file=true . *.json",
+		"npm:publish": "bun x --bun npm publish"
 	},
 	"devDependencies": {
 		"bun-types": "1.1.20",
-		"elysia": "1.0.0"
+		"elysia": "1.0.0",
+		"npm": "10.8.2"
 	},
 	"peerDependencies": {
 		"typescript": "^5.2.2",
