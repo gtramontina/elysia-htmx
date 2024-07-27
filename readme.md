@@ -2,16 +2,19 @@
 
 Elysia plugin to support integration with [HTMX](https://htmx.org/).
 
+> [!NOTE]  
+> This package moved to a new scope. If you were using [`elysia-htmx`](https://www.npmjs.com/package/elysia-htmx), you should update dependency and your imports to [`@gtramontina.com/elysia-htmx`](https://www.npmjs.com/package/@gtramontina.com/elysia-htmx) going forward.
+
 ## Installation
 
 ```bash
-bun add --exact elysia-htmx
+bun add --exact @gtramontina.com/elysia-htmx
 ```
 
 ## Usage
 
 ```ts
-import { htmx } from "elysia-htmx"; // 1. Import
+import { htmx } from "@gtramontina.com/elysia-htmx"; // 1. Import
 import Elysia from "elysia";
 
 new Elysia()
